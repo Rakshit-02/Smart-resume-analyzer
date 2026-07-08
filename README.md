@@ -1,16 +1,137 @@
-# React + Vite
+# Smart Resume Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered resume analysis and job match checker built with **React** and **Google Gemini API**. This project helps users upload a resume, compare it with a job description, and receive structured feedback such as ATS match score, missing keywords, strengths, weaknesses, and actionable improvement suggestions.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Recruiters and Applicant Tracking Systems (ATS) often scan resumes for role-specific keywords and alignment with the job description before a human even reviews them. This project aims to simplify that process by providing an intelligent resume analysis workflow.
 
-## React Compiler
+The user can upload a resume, provide a target job description, and receive AI-generated insights to understand how well the resume matches the role. The system is designed to be simple, fast, and useful for students and job seekers who want to improve their resumes before applying.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+* Upload and parse resume content
+* Paste or provide a target job description
+* AI-based resume evaluation using Gemini API
+* ATS-style match score estimation
+* Missing keyword identification
+* Resume strengths and improvement areas
+* Suggestions to tailor the resume for the target role
+* Clean frontend UI built with React and Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+### Frontend
+
+* React.js
+* JavaScript
+* Vite
+* CSS Modules / CSS
+
+### AI / Processing
+
+* Google Gemini API
+* Custom resume analysis logic
+* PDF parsing utility for resume text extraction
+
+## Project Structure
+
+```bash
+Smart-resume-analyzer/
+│── public/
+│── src/
+│   ├── assets/
+│   ├── component/
+│   │   └── Dashboard.jsx
+│   ├── services/
+│   │   ├── aiService.js
+│   │   └── pdfParser.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│── .gitignore
+│── package.json
+│── vite.config.js
+│── README.md
+```
+
+## How It Works
+
+1. The user uploads a resume file.
+2. The resume content is parsed and converted into readable text.
+3. The user provides a job description for the target role.
+4. The application sends the relevant input to the Gemini API.
+5. The AI analyzes the resume against the job description and returns:
+
+   * match score / compatibility insights
+   * missing keywords
+   * strengths in the resume
+   * weak sections / gaps
+   * improvement suggestions
+
+## Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Rakshit-02/Smart-resume-analyzer.git
+cd Smart-resume-analyzer
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Add environment variables
+
+Create a `.env` file in the root directory and add your Gemini API key:
+
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+### 4. Run the project locally
+
+```bash
+npm run dev
+```
+
+The app will start on the local development server shown in the terminal.
+
+## Use Case
+
+This project is useful for:
+
+* Students preparing for placements
+* Job seekers optimizing resumes for a specific role
+* Candidates checking ATS compatibility before applying
+* Anyone wanting AI-based resume feedback quickly
+
+## Future Improvements
+
+* Resume history and saved reports
+* Authentication and user accounts
+* Multiple job description comparison
+* Better ATS scoring logic with weighted sections
+* Downloadable PDF analysis report
+* Support for more resume formats
+* Dashboard analytics and previous analysis tracking
+
+## Learning Outcomes
+
+Through this project, I explored and implemented:
+
+* React-based frontend development
+* File handling and PDF parsing in JavaScript
+* Environment variable management
+* API integration with Gemini
+* Prompt-based structured analysis workflow
+* Building a practical AI-powered application for resume evaluation
+
+## Author
+
+**Rakshit**
+Built as a practical AI + frontend project focused on resume analysis and job matching.
