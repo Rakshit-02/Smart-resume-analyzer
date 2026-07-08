@@ -1,3 +1,8 @@
+## Live Demo
+
+* **Live App:** [Open Smart Resume Analyzer](https://smart-resume-analyzer-green.vercel.app/)
+* **GitHub Repository:** [Smart Resume Analyzer](https://github.com/Rakshit-02/Smart-resume-analyzer)
+
 # Smart Resume Analyzer
 
 An AI-powered resume analysis and job match checker built with **React** and **Google Gemini API**. This project helps users upload a resume, compare it with a job description, and receive structured feedback such as ATS match score, missing keywords, strengths, weaknesses, and actionable improvement suggestions.
